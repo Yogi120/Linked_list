@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Linked_List
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -14,6 +14,10 @@ namespace Linked_List
 
             list.AddFirst(20);
             list.AddFirst(30);
+
+            list.AddLast(45);
+            list.AddLast(34);
+                
 
             list.PrintList();
         }

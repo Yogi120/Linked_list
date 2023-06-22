@@ -31,6 +31,8 @@ namespace Linked_List
 
         public void AddFirst(int value)
         {
+            // Adding Node at first
+
             Node newNode = new Node(value);
 
             if (head == null)
@@ -42,6 +44,24 @@ namespace Linked_List
             {
                 newNode.Next = head;
                 head = newNode;
+            }
+        }
+
+        public void AddLast(int value)
+        {
+            // Adding Node at last
+            
+            Node newNode = new Node(value);
+
+            if (tail == null)
+            {
+                head = newNode;
+                tail = newNode;
+            }
+            else
+            {
+                tail.Next = newNode;
+                tail = newNode;
             }
         }
         public void PrintList()
