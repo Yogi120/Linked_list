@@ -17,8 +17,13 @@ namespace Linked_List
 
             list.AddLast(45);
             list.AddLast(34);
-                
 
+            Console.WriteLine("Before deleting");
+            list.PrintList();
+
+            Console.WriteLine("After deleting First");
+            list.DeleteFirst();
+                
             list.PrintList();
         }
     }

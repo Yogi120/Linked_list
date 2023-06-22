@@ -64,6 +64,26 @@ namespace Linked_List
                 tail = newNode;
             }
         }
+
+        public void DeleteFirst()
+        {
+            // Deleting first Node
+
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList is empty. No element to delete.");
+            }
+            else
+            {
+                head = head.Next;
+
+                if (head == null)
+                {
+                    tail = null;
+                }
+            }
+        }
+
         public void PrintList()
         {
             Node currentNode = head;
