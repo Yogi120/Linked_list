@@ -67,7 +67,7 @@ namespace Linked_List
 
         public void DeleteFirst()
         {
-            // Deleting first Node
+            // It will Delete first Node
 
             if (head == null)
             {
@@ -81,6 +81,34 @@ namespace Linked_List
                 {
                     tail = null;
                 }
+            }
+        }
+
+
+        public void DeleteLast()
+        {
+            // It will Delete Last Node
+
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList is empty. No element to delete.");
+            }
+            else if (head == tail)
+            {
+                head = null;
+                tail = null;
+            }
+            else
+            {
+                Node currentNode = head;
+
+                while (currentNode.Next != tail)
+                {
+                    currentNode = currentNode.Next;
+                }
+
+                currentNode.Next = null;
+                tail = currentNode;
             }
         }
 
